@@ -99,7 +99,7 @@ class GoogleAuthenticator
      */
     public function getUrl($user, $hostname, $secret)
     {
-        $encoder = "https://www.google.com/chart?chs=200x200&chld=M|0&cht=qr&chl=";
+        $encoder = "https://chart.googleapis.com/chart?chs=200x200&chld=M|0&cht=qr&chl=";
         $encoderURL = sprintf("%sotpauth://totp/%s@%s%%3Fsecret%%3D%s", $encoder, $user, $hostname, $secret);
 
         return $encoderURL;
